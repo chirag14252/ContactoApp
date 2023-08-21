@@ -6,7 +6,7 @@ const home = ()=>{
       <div>
        <h1>Contacto App</h1>
        <div>
-        <img src="../../images/contact.png" alt="" height= "300" width="300"/>
+        <img src="../../../images/contact.png" alt="" height="300" width ="300"/>
        </div>
        <button onClick={()=>{
         navigate("/login")

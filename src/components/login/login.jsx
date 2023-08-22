@@ -35,19 +35,22 @@ return(
  <>
  <h1>Login</h1>
  <form onSubmit={EnterUser}>
-  <label htmlFor="username">Username:</label>
+  <label htmlFor="username" style={{float:"left"}}>Username</label>
    <input type="text" name="username" id="username" value= {username} onChange={(e)=>{
     Setusername(e.target.value);
    }}/>
    <br />
    <br />
-  <label htmlFor="password">Password:</label>
+  <label htmlFor="password" style={{float:"left"}}>Password</label>
   <input type="password" id = "password" name = "password" value = {password} onChange={(e)=>{
   setPassword(e.target.value);
   }}/>
   <br />
   <br />
   <button type="Submit">Login</button>
+  <button onClick = {()=>{
+    navigate("/");
+  }} class ="return">Return to Home Page</button>
  </form>
  <ToastContainer />
 </>

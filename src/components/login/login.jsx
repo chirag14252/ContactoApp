@@ -50,7 +50,7 @@ return(
   <button type="Submit">Login</button>
   <button onClick = {()=>{
     navigate("/");
-  }} class ="return">Return to Home Page</button>
+  }} className ="return">Return to Home Page</button>
  </form>
  <ToastContainer />
 </>

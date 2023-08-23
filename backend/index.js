@@ -1,21 +1,31 @@
 import express, { urlencoded } from "express";
 import cors from "cors";
-import mongoose, { model } from "mongoose";
+import mongoose, { model, mongo } from "mongoose";
 import { json } from "express";
 import userModels from "./models/userDetails.js";
 import userContact from "./models/Contact.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 const app = express();
+// const port = 3000;
+// mongoDB connection 
 
-mongoose.connect("mongodb+srv://USER:X4YtymbjdkRYcfT5@atlascluster.nilxnts.mongodb.net/ContactsApp").then(
+// mongoose.connect("mongodb+srv://USER:X4YtymbjdkRYcfT5@atlascluster.nilxnts.mongodb.net/ContactsApp").then(
+//     () => {
+//         console.log("database connected successfully");
+//     }
+// );
+
+
+mongoose.connect("mongodb+srv://USER:X4YtymbjdkRYcfT5@atlascluster.nilxnts.mongodb.net/ContactApp?retryWrites=true&w=majority").then(
     () => {
         console.log("database connected successfully");
     }
 );
+
 app.use(cors());
 app.use(json());
-const port = 3000;
+
 
 app.get("/", (req, res) => {
     return res.status(200).json({
@@ -319,9 +329,9 @@ app.get("/get-contact/:contact_id", checkToken, (req, res) => {
     })
 })
 
-app.listen(port, () => {
-    console.log("port is listening at port: " + port);
-})
+// app.listen(port, () => {
+//     console.log("port is listening at port: " + port);
+// })
 
 
 

@@ -10,7 +10,7 @@ const home = ()=>{
        </div>
        <button onClick={()=>{
         navigate("/login")
-       }} class = "login">Login</button>
+       }} className = "login">Login</button>
        <button onClick={
         ()=>{
         navigate("/register")

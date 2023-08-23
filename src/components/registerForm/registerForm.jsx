@@ -59,7 +59,7 @@ return(
     <br />
     <br />
     <button type="submit">Register</button>
-    <button class ="back" onClick={()=>{
+    <button className ="back" onClick={()=>{
       navigate("/")
     }}>Back to Home Page</button>
  </form>
